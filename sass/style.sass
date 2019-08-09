@@ -1,0 +1,152 @@
+$main-font: 'Poppins', sans-serif
+$grey: rgb(203, 205, 196)
+* 
+    max-width: 2000px
+    margin: 0 auto
+body
+    font-family: $main-font
+.header 
+    min-height: 100vh
+    background-image: url('https://s6.ifotos.pl/img/Mainjpg_qswpeah.jpg')
+    background-position: center
+    background-size: cover
+    position: relative
+    .logo
+        position: absolute
+        display: inline
+        top: 20px
+        left: 30px
+    .hello
+        position: absolute
+        left: 100px
+        top: 120px
+        display: inline
+        max-height: 10vh
+    nav
+        .menu
+            float: right
+            .menu-link
+                transition: 1.5s 0.0s
+                opacity: 0
+                transform: matrix(1, 0, 0, 1, 50, 0)
+            .menu-item
+                display: inline-block
+                font-size: 18px
+                line-height: 18px
+                padding: 15px 10px
+                a
+                    text-decoration: none
+                    color: white
+                    font-weight: bold
+                    letter-spacing: 2px
+                    display: none
+                    &:hover
+                        color: $grey
+                .nav-icon
+                    width: 35px
+                    height: 18px
+                    position: relative
+                    margin-right: 15px
+                    top: 18px
+                    transition: 5s ease-in-out
+                    span
+                        background: white
+                        width: 100%
+                        height: 3px
+                        position: absolute
+                        display: block
+                        opacity: 1
+                    #first
+                        top: 0
+                        transition: transform .2s ease-in-out
+                    #second
+                        top: 7px 
+                        transition: .2s ease-in-out
+                    #third
+                        top: 14px
+                        width: 60%
+                        right: 0 !important
+                        transition: transform .2s ease-in-out
+    .slogans
+        color: white
+        padding: 250px 100px 50px 100px
+        font-size: 65px
+        font-weight: 900
+        letter-spacing: -3px
+        .cursor
+            opacity: 0
+            transition: .2s
+        .active
+            opacity: 1
+    .social-media
+        padding: 30px 100px
+        a
+            margin-right: 40px
+            &:hover
+                text-decoration: none
+            .fab
+                font-size: 22px
+                color: white
+                &:hover
+                    -webkit-animation-duration: .3s
+                    animation-duration: .3s
+                    -webkit-animation-timing-function: linear
+                    animation-timing-function: linear
+                    -webkit-animation-name: rotation
+                    animation-name: rotation
+                    -webkit-animation-iteration-count: infinite
+                    animation-iteration-count: 1
+                    transform-origin: center
+                @keyframes rotation 
+                    from 
+                        -webkit-transform: rotate3d(0, 0, 1, 0deg)
+                        transform: rotate3d(0, 0, 1, 0deg)
+                    
+
+                    to 
+                        -webkit-transform: rotate3d(0, 0, 1, 360deg)
+                        transform: rotate3d(0, 0, 1, 360deg)
+                    cursor: pointer
+                
+    p
+        color: $grey
+        background-color: rgba(0, 0, 0, 0.3)
+        padding: 30px 100px
+        font-size: 18px
+        font-weight: 900
+        letter-spacing: 1px
+    .arrow-down
+        padding: 30px 150px
+        a
+            color: white
+            text-decoration: none
+            font-size: 36px
+            .bounce-arrow
+                position: relative
+                top: 0
+                animation: bounce 2s infinite
+            @keyframes bounce
+                0%, 20%, 50%, 80%, 100% 
+                    transform: translateY(0)
+                40%
+                    transform: translateY(-30px)
+                60%
+                    transform: translateY(-15px)
+
+
+
+    .triangle-left
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 0
+        border-bottom: 12vh solid white
+        border-right: 22vw solid transparent
+    .triangle-right
+        position: absolute
+        right: 0
+        bottom: 0
+        height: 0
+        width: 0
+        border-bottom: 12vh solid white
+        border-left: 78vw solid transparent
