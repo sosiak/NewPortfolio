@@ -1,8 +1,6 @@
 $main-font: 'Poppins', sans-serif
 $grey: rgb(203, 205, 196)
-* 
-    max-width: 2000px
-    margin: 0 auto
+
 body
     font-family: $main-font
 .header 
@@ -14,8 +12,8 @@ body
     .logo
         position: absolute
         display: inline
-        top: 20px
-        left: 30px
+        top: 50px
+        left: 50px
     .hello
         position: absolute
         left: 100px
@@ -25,8 +23,9 @@ body
     nav
         .menu
             float: right
+            padding: 20px 5px
             .menu-link
-                transition: 1.5s 0.0s
+                transition: 1s 0.0s
                 opacity: 0
                 transform: matrix(1, 0, 0, 1, 50, 0)
             .menu-item
@@ -132,9 +131,6 @@ body
                     transform: translateY(-30px)
                 60%
                     transform: translateY(-15px)
-
-
-
     .triangle-left
         position: absolute
         left: 0
@@ -150,3 +146,64 @@ body
         width: 0
         border-bottom: 12vh solid white
         border-left: 78vw solid transparent
+
+
+.about-me
+    padding: 200px 100px
+    .section-title
+        font-size: 36px
+        font-weight: bold
+        letter-spacing: -1px
+        position: relative
+        padding-bottom: 15px
+        &:before
+            content: ''
+            width: 40px
+            height: 2px
+            background: black
+            position: absolute
+            left: 0
+            bottom: 0
+        &:after
+            content: ''
+            width: 30px
+            height: 2px
+            background: black
+            position: absolute
+            left: 0
+            bottom: -6px
+
+
+
+
+@media(max-width: 1200px)
+    .header
+        .slogans
+            font-size: 50px
+@media(max-width: 992px)
+    .header
+        nav
+            .menu
+                .menu-item
+                    padding: 15px 5px
+        .hello 
+            left: 50px
+        .slogans
+            padding: 250px 50px 50px 50px
+        p
+            padding: 30px 50px
+        .social-media
+            padding: 30px 50px
+@media(max-width: 767px)
+    .header
+        nav
+            .menu
+                position: relative
+                right: 50px
+                .menu-link
+                    display: block
+                .menu-item
+                    .nav-icon
+                        position: absolute
+                        top: 50px
+                        right: 20px

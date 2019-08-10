@@ -6,7 +6,12 @@ const secondSpan = document.querySelector("#second");
 const thirdSpan = document.querySelector("#third");
 const socialMediaIcons = document.querySelectorAll(".fab");
 
+
+
+
 //menu
+
+let flagaMenu = true;
 navIcon.addEventListener("mouseover", () => {
     if (navIcon.className == "nav-icon") {
         thirdSpan.style.width = "100%";
@@ -33,17 +38,19 @@ const navIconAnimation = () => {
         thirdSpan.style.transformOrigin = "";
         thirdSpan.style.left = "";
         thirdSpan.style.width = "60%";
+        flagaMenu = true;
+        console.log(flagaMenu);
         // menuLink animation
         menuLink.forEach((e) => {
-            e.style.opacity = "0";
-            e.style.transform = "matrix(1, 0, 0, 1, 50, 0)";
-            e.style.transition = "1.5s";
             setTimeout(() => {
                 menuA.forEach((e) => {
-                    e.style.display = "none";
+                    if (flagaMenu == true) {
+                        e.style.display = "none";
+                    }
                 })
-            }, 1000);
-
+            }, 700);
+            e.style.opacity = "0";
+            e.style.transform = "matrix(1, 0, 0, 1, 50, 0)";
         })
     } else {
         // icon animation
@@ -58,14 +65,17 @@ const navIconAnimation = () => {
         thirdSpan.style.transformOrigin = "left center";
         thirdSpan.style.transform = "rotate(-45deg)";
         thirdSpan.style.left = "8px";
+        flagaMenu = false;
+        console.log(flagaMenu);
         // menuLink animation
         menuLink.forEach((e) => {
             menuA.forEach((e) => {
-                e.style.display = "block";
+                if (flagaMenu == false) {
+                    e.style.display = "block";
+                }
             })
             e.style.opacity = "1";
             e.style.transform = "matrix(1, 0, 0, 1, 0, 0)";
-            e.style.transition = "1.5s";
         })
     }
 }
