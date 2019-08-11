@@ -351,6 +351,26 @@ body {
   background-image: url("https://s6.ifotos.pl/img/JavaScrip_qswxqqp.png");
 }
 
+.skills .skills-container .skills-element .fourth-skill {
+  background-image: url("https://s6.ifotos.pl/img/rwdpng_qswnpen.png");
+}
+
+.skills .skills-container .skills-element .fifth-skill {
+  background-image: url("https://s6.ifotos.pl/img/photoshop_qswnpeq.png");
+}
+
+.skills .skills-container .skills-element .sixth-skill {
+  background-image: url("https://s6.ifotos.pl/img/gitlogopn_qswnpws.png");
+}
+
+.skills .skills-container .skills-element .seventh-skill {
+  background-image: url("https://s6.ifotos.pl/img/bootstrap_qswnpwq.png");
+}
+
+.skills .skills-container .skills-element .eigth-skill {
+  background-image: url("https://s6.ifotos.pl/img/jquerypng_qswnpsp.png");
+}
+
 .skills .skills-container .skills-element .skills-right {
   width: 80%;
   float: right;
@@ -378,6 +398,80 @@ body {
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+}
+
+.portfolio {
+  padding: 20px 100px 100px 100px;
+  background-color: #f3f3f3;
+  min-height: 600px;
+  position: relative;
+}
+
+.portfolio .section-title {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  float: right;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.portfolio .section-title:before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.portfolio .section-title:after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+}
+
+.portfolio .triangle-left-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  border-bottom: 12vh solid white;
+  border-right: 22vw solid transparent;
+}
+
+.portfolio .triangle-right-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 12vh solid white;
+  border-left: 78vw solid transparent;
+}
+
+.portfolio .triangle-left-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  border-bottom: 12vh solid white;
+  border-right: 22vw solid transparent;
+}
+
+.portfolio .triangle-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 12vh solid white;
+  border-left: 78vw solid transparent;
 }
 
 @media (max-width: 1200px) {
