@@ -114,7 +114,7 @@ const addLetter = () => {
     }
 }
 
-setInterval(addLetter, 300);
+setInterval(addLetter, 200);
 
 const cursorVisibility = () => {
     spanCursor.classList.toggle("active");

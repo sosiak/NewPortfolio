@@ -3,9 +3,10 @@ $grey: rgb(203, 205, 196)
 
 body
     font-family: $main-font
+    margin: 0 auto
 .header 
     min-height: 100vh
-    background-image: url('https://s6.ifotos.pl/img/Mainjpg_qswpeah.jpg')
+    background-image: url('https://s6.ifotos.pl/img/mainsecon_qswxqpr.jpg')
     background-position: center
     background-size: cover
     position: relative
@@ -149,9 +150,9 @@ body
 
 
 .about-me
-    padding: 200px 100px
+    padding: 100px 100px
     .section-title
-        font-size: 36px
+        font-size: 48px
         font-weight: bold
         letter-spacing: -1px
         position: relative
@@ -172,6 +173,77 @@ body
             position: absolute
             left: 0
             bottom: -6px
+    p
+        padding: 20px 0
+        font-size: 22px
+        font-weight: bold
+        line-height: 32px
+
+.skills
+    padding: 30px 100px
+    .section-title
+        font-size: 48px
+        font-weight: bold
+        letter-spacing: -1px
+        position: relative
+        padding-bottom: 15px
+        &:before
+            content: ''
+            width: 40px
+            height: 2px
+            background: black
+            position: absolute
+            left: 0
+            bottom: 0
+        &:after
+            content: ''
+            width: 30px
+            height: 2px
+            background: black
+            position: absolute
+            left: 0
+            bottom: -6px
+    .skills-container
+        padding: 20px 30px
+        .skills-element
+            width: 32%
+            display: inline-block
+            overflow: hidden
+            .skills-left
+                display: inline-block
+                width: 20%
+                float: left
+                min-height: 150px
+                background-position: top
+                background-size: contain
+                background-repeat: no-repeat
+            .first-skill
+                background-image: url('https://s6.ifotos.pl/img/html5png_qswxqsa.png')
+            .second-skill
+                background-image: url('https://s6.ifotos.pl/img/CSS3svgpn_qswxqaa.png')
+            .third-skill
+                background-image: url('https://s6.ifotos.pl/img/JavaScrip_qswxqqp.png')
+                
+            .skills-right
+                width: 80%
+                float: right
+                display: inline-block
+                min-height: 150px
+                h2
+                    font-weight: bold
+                    font-size: 22px
+                    padding-left: 10px
+                    margin-block-start: 0
+                    margin-block-end: 0
+                    letter-spacing: -1px
+                p
+                    font-size: 14px
+                    line-height: 18px
+                    padding-left: 10px
+                    letter-spacing: -1px
+                    margin-block-start: 0
+                    margin-block-end: 0
+
 
 
 
