@@ -86,36 +86,53 @@ navIcon.addEventListener("click", navIconAnimation);
 
 const spanDynamicText = document.querySelector(".dynamic-text");
 const spanCursor = document.querySelector(".cursor");
-const slogans = ["tu SIOFO ", "tu Sławomir ", "oto mój mały świat . . . ", ];
+const words = ["tu Sławomir ", "tu SIOFO ", "oto mój mały świat . . . ", ];
 
 
-let indexWord = 0;
+let i = 0;
 let indexLetter = 0;
+let timer;
 let flag = true;
 
+const typingEffect = () => {
+    let word = words[i].split("");
+    const loopTyping = () => {
+        if (word.length > 0) {
+            spanDynamicText.textContent += word.shift();
+        } else {
+            deletingEffect();
+            return false;
+        };
+        timer = setTimeout(loopTyping, 300);
+    };
+    loopTyping();
+};
 
-const addLetter = () => {
-    if (indexLetter >= 0 && flag == true) {
-        spanDynamicText.textContent += slogans[indexWord][indexLetter];
-    }
-    indexLetter++;
-    if (indexLetter == slogans[indexWord].length) {
-        flag = false;
-        setTimeout(() => {
-            indexLetter = 0;
-            indexWord++;
-            spanDynamicText.textContent = "";
-            flag = true;
-            if (indexWord == slogans.length) {
-                indexWord = 0;
-            }
-        }, 2000);
+const deletingEffect = () => {
+    let word = words[i].split("");
+    const loopDeleting = () => {
+        if (word.length > 0) {
+            word.pop();
+            spanDynamicText.textContent = word.join("");
+        } else {
+            if (words.length > (i + 1)) {
+                i++;
+            } else {
+                i = 0;
+            };
+            typingEffect();
+            return false;
+        };
+        timer = setTimeout(loopDeleting, 100);
+    };
+    setTimeout(loopDeleting, 2000);
+};
 
-    }
-}
+typingEffect();
 
-setInterval(addLetter, 200);
+//
 
+// cursor Animation
 const cursorVisibility = () => {
     spanCursor.classList.toggle("active");
 }

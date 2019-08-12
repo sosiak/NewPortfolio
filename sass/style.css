@@ -134,6 +134,7 @@ body {
 .header .social-media a .fab {
   font-size: 22px;
   color: white;
+  cursor: pointer;
 }
 
 .header .social-media a .fab:hover {
@@ -158,7 +159,6 @@ body {
     -webkit-transform: rotate3d(0, 0, 1, 360deg);
     transform: rotate3d(0, 0, 1, 360deg);
   }
-  cursor: pointer;
 }
 
 @keyframes rotation {
@@ -170,7 +170,6 @@ body {
     -webkit-transform: rotate3d(0, 0, 1, 360deg);
     transform: rotate3d(0, 0, 1, 360deg);
   }
-  cursor: pointer;
 }
 
 .header p {
@@ -401,7 +400,7 @@ body {
 }
 
 .portfolio {
-  padding: 20px 100px 100px 100px;
+  padding: 100px;
   background-color: #f3f3f3;
   min-height: 600px;
   position: relative;
@@ -441,8 +440,8 @@ body {
   left: 0;
   top: 0;
   height: 0;
-  border-bottom: 12vh solid white;
-  border-right: 22vw solid transparent;
+  border-top: 12vh solid white;
+  border-right: 78vw solid transparent;
 }
 
 .portfolio .triangle-right-top {
@@ -451,8 +450,8 @@ body {
   top: 0;
   height: 0;
   width: 0;
-  border-bottom: 12vh solid white;
-  border-left: 78vw solid transparent;
+  border-top: 12vh solid white;
+  border-left: 22vw solid transparent;
 }
 
 .portfolio .triangle-left-bottom {
