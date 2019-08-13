@@ -5,7 +5,7 @@ body {
 
 .header {
   min-height: 100vh;
-  background-image: url("https://s6.ifotos.pl/img/mainsecon_qswxqpr.jpg");
+  background-image: url("../Images/mainsecond.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -332,42 +332,42 @@ body {
   display: inline-block;
   width: 20%;
   float: left;
-  min-height: 150px;
+  min-height: 200px;
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .skills .skills-container .skills-element .first-skill {
-  background-image: url("https://s6.ifotos.pl/img/html5png_qswxqsa.png");
+  background-image: url("../Images/html5.png");
 }
 
 .skills .skills-container .skills-element .second-skill {
-  background-image: url("https://s6.ifotos.pl/img/CSS3svgpn_qswxqaa.png");
+  background-image: url("../Images/CSS.3.svg.png");
 }
 
 .skills .skills-container .skills-element .third-skill {
-  background-image: url("https://s6.ifotos.pl/img/JavaScrip_qswxqqp.png");
+  background-image: url("../Images/JavaScript-logo.png");
 }
 
 .skills .skills-container .skills-element .fourth-skill {
-  background-image: url("https://s6.ifotos.pl/img/rwdpng_qswnpen.png");
+  background-image: url("../Images/rwd.png");
 }
 
 .skills .skills-container .skills-element .fifth-skill {
-  background-image: url("https://s6.ifotos.pl/img/photoshop_qswnpeq.png");
+  background-image: url("../Images/photoshop.png");
 }
 
 .skills .skills-container .skills-element .sixth-skill {
-  background-image: url("https://s6.ifotos.pl/img/gitlogopn_qswnpws.png");
+  background-image: url("../Images/git_logo.png");
 }
 
 .skills .skills-container .skills-element .seventh-skill {
-  background-image: url("https://s6.ifotos.pl/img/bootstrap_qswnpwq.png");
+  background-image: url("../Images/bootstrap.png");
 }
 
 .skills .skills-container .skills-element .eigth-skill {
-  background-image: url("https://s6.ifotos.pl/img/jquerypng_qswnpsp.png");
+  background-image: url("../Images/jquery.png");
 }
 
 .skills .skills-container .skills-element .skills-right {
@@ -400,7 +400,7 @@ body {
 }
 
 .portfolio {
-  padding: 100px;
+  padding: 100px 30px;
   background-color: #f3f3f3;
   min-height: 600px;
   position: relative;
@@ -433,6 +433,51 @@ body {
   position: absolute;
   right: 0;
   bottom: -6px;
+}
+
+.portfolio .nav-portfolio {
+  padding: 130px 100px;
+  position: absolute;
+  right: 0;
+}
+
+.portfolio .nav-portfolio li {
+  letter-spacing: -1px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.portfolio .nav-portfolio li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-all-sites .all-projects {
+  padding: 200px 30px 100px 30px;
+}
+
+.portfolio .portfolio-all-sites .all-projects .project-element {
+  display: inline-block;
+  min-height: 250px;
+  width: 30%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
+  margin-right: 10px;
+}
+
+.portfolio .portfolio-all-sites .all-projects .fitness {
+  background-image: url("../Images/fitness.png");
+}
+
+.portfolio .portfolio-all-sites .all-projects .mogo {
+  background-image: url("../Images/mogo.png");
+}
+
+.portfolio .portfolio-all-sites .all-projects .portfolio {
+  background-image: url("../Images/portfolio.png");
 }
 
 .portfolio .triangle-left-top {
