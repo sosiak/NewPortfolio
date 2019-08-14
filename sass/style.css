@@ -16,6 +16,8 @@ body {
   display: inline;
   top: 50px;
   left: 50px;
+  height: 25px;
+  width: auto;
 }
 
 .header .hello {
@@ -452,6 +454,10 @@ body {
   cursor: pointer;
 }
 
+.portfolio .nav-portfolio .active {
+  font-weight: bold;
+}
+
 .portfolio .portfolio-all-sites .all-projects {
   padding: 200px 30px 100px 30px;
 }
@@ -476,8 +482,61 @@ body {
   background-image: url("../Images/mogo.png");
 }
 
-.portfolio .portfolio-all-sites .all-projects .portfolio {
+.portfolio .portfolio-all-sites .all-projects .my-portfolio {
   background-image: url("../Images/portfolio.png");
+}
+
+.portfolio .portfolio-all-sites .all-projects .design-lab {
+  background-image: url("../Images/design-lab.png");
+}
+
+.portfolio .portfolio-all-sites .all-projects .active-box {
+  background-image: url("../Images/activebox.png");
+}
+
+.portfolio .portfolio-all-sites .all-projects .picture-perfect {
+  background-image: url("../Images/picture-perfect.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites {
+  padding: 200px 30px 100px 30px;
+  display: none;
+}
+
+.portfolio .portfolio-all-sites .all-sites .project-element {
+  display: inline-block;
+  min-height: 250px;
+  width: 30%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
+  margin-right: 10px;
+}
+
+.portfolio .portfolio-all-sites .all-sites .fitness {
+  background-image: url("../Images/fitness.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites .mogo {
+  background-image: url("../Images/mogo.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites .my-portfolio {
+  background-image: url("../Images/portfolio.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites .design-lab {
+  background-image: url("../Images/design-lab.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites .active-box {
+  background-image: url("../Images/activebox.png");
+}
+
+.portfolio .portfolio-all-sites .all-sites .picture-perfect {
+  background-image: url("../Images/picture-perfect.png");
 }
 
 .portfolio .triangle-left-top {
