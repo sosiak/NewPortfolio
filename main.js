@@ -9,6 +9,8 @@ const socialMediaIcons = document.querySelectorAll(".fab");
 
 
 
+
+
 //menu
 
 let flagaMenu = true;
@@ -39,7 +41,6 @@ const navIconAnimation = () => {
         thirdSpan.style.left = "";
         thirdSpan.style.width = "60%";
         flagaMenu = true;
-        console.log(flagaMenu);
         // menuLink animation
         menuLink.forEach((e) => {
             setTimeout(() => {
@@ -66,7 +67,6 @@ const navIconAnimation = () => {
         thirdSpan.style.transform = "rotate(-45deg)";
         thirdSpan.style.left = "8px";
         flagaMenu = false;
-        console.log(flagaMenu);
         // menuLink animation
         menuLink.forEach((e) => {
             menuA.forEach((e) => {
