@@ -1,3 +1,4 @@
+const navFixed = document.querySelector("nav");
 const navIcon = document.querySelector(".nav-icon");
 const menuLink = document.querySelectorAll(".menu-link");
 const menuA = document.querySelectorAll(".menu-item a");
@@ -7,6 +8,49 @@ const thirdSpan = document.querySelector("#third");
 const socialMediaIcons = document.querySelectorAll(".fab");
 
 
+//menu fixed
+
+const fixedNav = () => {
+    const logoImage = document.querySelector(".logo");
+    const windowHeight = window.innerHeight;
+    const ulMenuHeight = document.querySelector(".menu").clientHeight;
+    const backgroundDiv = document.querySelector(".backgroundToFixedNav");
+    const menu = document.querySelector(".menu");
+    const menuSpan = document.querySelectorAll(".nav-icon span");
+
+
+
+    if (document.documentElement.scrollTop > windowHeight && window.innerWidth > 767) {
+
+        logoImage.style.position = "fixed";
+        logoImage.style.top = "10px";
+        logoImage.setAttribute("src", "Images/logoBlack.png");
+        logoImage.style.zIndex = "100";
+        menu.style.position = "fixed";
+        menu.style.right = "0";
+        menu.style.top = "-40px";
+        menu.style.zIndex = "99";
+        menuSpan.forEach((e) => {
+            e.style.background = "black";
+        })
+        menuA.forEach((e) => {
+            e.style.color = "black";
+        })
+
+
+        backgroundDiv.style.height = `55px`;
+        backgroundDiv.style.display = "block";
+
+
+        console.log(document.documentElement.scrollTop);
+    } else {
+        logoImage.setAttribute("src", "Images/logo.png");
+        logoImage.style.position = "absolute";
+        backgroundDiv.style.height = "0px";
+    }
+
+}
+document.addEventListener("scroll", fixedNav);
 
 
 

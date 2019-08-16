@@ -7,6 +7,14 @@ $grey: rgb(203, 205, 196)
 body
     font-family: $main-font
     margin: 0 auto
+.backgroundToFixedNav
+    position: fixed
+    top: 0
+    z-index: 99
+    background: white
+    width: 100%
+    box-shadow: 1.5px 1.33px 10px 0px rgba(0, 0, 0, 0.75)
+
 .header 
     min-height: 100vh
     background-image: url('../Images/mainsecond.jpg')
@@ -74,6 +82,8 @@ body
                         width: 60%
                         right: 0 !important
                         transition: transform .2s ease-in-out
+                .active
+                    color: $grey
     .slogans
         color: white
         padding: 250px 100px 50px 100px
@@ -306,32 +316,22 @@ body
                     height: 100%
                     border-radius: 10px
                     box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75)
+                .play-site
+                    color: black
+                    text-decoration: none
+                    font-size: 25px
+                    padding: 10px
+                    width: 55px
+                    text-align: center
+                    background-color: white
+                    border-radius: 50%
+                    position: absolute
+                    bottom: 70px
+                    left: 50px
+                    transition: .5s
         .all-sites
-            padding: 200px 30px 100px 30px
+            @extend .all-projects
             display: none
-            // display: inline-block
-            // width: 1000px
-            .project-element
-                display: inline-block
-                min-height: 250px
-                width: 30%
-                background-position: center
-                background-size: 100% 100%
-                background-repeat: no-repeat
-                box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75)
-                margin-right: 10px
-            .fitness
-                background-image: url('../Images/fitness.png')
-            .mogo
-                background-image: url('../Images/mogo.png')
-            .my-portfolio
-                background-image: url('../Images/portfolio.png')
-            .design-lab
-                background-image: url('../Images/design-lab.png')
-            .active-box
-                background-image: url('../Images/activebox.png')
-            .picture-perfect
-                background-image: url('../Images/picture-perfect.png')
     .triangle-left-top
         position: absolute
         left: 0
@@ -446,7 +446,6 @@ body
                     letter-spacing: 0
                     border: 0
                     margin-top: 30px
-
         .contact-right
             text-align: right
             font-weight: bold
