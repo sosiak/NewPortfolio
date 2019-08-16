@@ -9,7 +9,7 @@ const socialMediaIcons = document.querySelectorAll(".fab");
 
 
 //menu fixed
-
+let flagFixed = false;
 const fixedNav = () => {
     const logoImage = document.querySelector(".logo");
     const windowHeight = window.innerHeight;
@@ -21,32 +21,34 @@ const fixedNav = () => {
 
 
     if (document.documentElement.scrollTop > windowHeight && window.innerWidth > 767) {
-
-        logoImage.style.position = "fixed";
-        logoImage.style.top = "10px";
         logoImage.setAttribute("src", "Images/logoBlack.png");
-        logoImage.style.zIndex = "100";
-        menu.style.position = "fixed";
-        menu.style.right = "0";
-        menu.style.top = "-40px";
-        menu.style.zIndex = "99";
-        menuSpan.forEach((e) => {
-            e.style.background = "black";
-        })
-        menuA.forEach((e) => {
-            e.style.color = "black";
-        })
-
-
+        if (flagFixed == false) {
+            logoImage.classList.toggle("logoFixed");
+            menu.classList.toggle("menuFixed");
+            menuSpan.forEach((e) => {
+                e.classList.toggle("spanFixed");
+            })
+            menuA.forEach((e) => {
+                e.classList.toggle("linkFixed");
+            })
+        }
+        flagFixed = true;
         backgroundDiv.style.height = `55px`;
         backgroundDiv.style.display = "block";
-
-
-        console.log(document.documentElement.scrollTop);
     } else {
         logoImage.setAttribute("src", "Images/logo.png");
-        logoImage.style.position = "absolute";
-        backgroundDiv.style.height = "0px";
+        if (flagFixed == true) {
+            logoImage.classList.toggle("logoFixed");
+            backgroundDiv.style.height = "0px";
+            menu.classList.toggle("menuFixed");
+            menuSpan.forEach((e) => {
+                e.classList.toggle("spanFixed");
+            })
+            menuA.forEach((e) => {
+                e.classList.toggle("linkFixed");
+            })
+        }
+        flagFixed = false;
     }
 
 }
@@ -183,3 +185,12 @@ const cursorVisibility = () => {
 
 setInterval(cursorVisibility, 700);
 //
+
+const allHrefs = document.querySelectorAll('[href^="#"]');
+const allHrefsArray = Array.prototype.slice.call(allHrefs);
+allHrefsArray.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        let target = item.getAttribute('href');
+        // e.preventDefault();
+    })
+})

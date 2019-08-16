@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
@@ -30,12 +34,25 @@ body {
   width: auto;
 }
 
+.header .logoFixed {
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+}
+
 .header .hello {
   position: absolute;
   left: 100px;
   top: 120px;
   display: inline;
   max-height: 10vh;
+}
+
+.header nav .menuFixed {
+  position: fixed;
+  right: 0;
+  top: -40px;
+  z-index: 99;
 }
 
 .header nav .menu {
@@ -68,6 +85,10 @@ body {
 
 .header nav .menu .menu-item a:hover {
   color: #cbcdc4;
+}
+
+.header nav .menu .menu-item .linkFixed {
+  color: black;
 }
 
 .header nav .menu .menu-item .nav-icon {
@@ -115,6 +136,10 @@ body {
   transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.header nav .menu .menu-item .nav-icon .spanFixed {
+  background: black;
 }
 
 .header nav .menu .menu-item .active {
@@ -268,7 +293,7 @@ body {
 }
 
 .about-me {
-  padding: 100px 100px;
+  padding: 100px 100px 30px 100px;
 }
 
 .about-me .section-title {
@@ -307,7 +332,7 @@ body {
 }
 
 .skills {
-  padding: 30px 100px;
+  padding: 50px 100px;
 }
 
 .skills .section-title {

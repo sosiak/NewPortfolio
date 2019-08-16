@@ -3,10 +3,12 @@ $grey: rgb(203, 205, 196)
 
     
   
-
+html
+    scroll-behavior: smooth
 body
     font-family: $main-font
     margin: 0 auto
+    
 .backgroundToFixedNav
     position: fixed
     top: 0
@@ -28,6 +30,10 @@ body
         left: 50px
         height: 25px
         width: auto
+    .logoFixed
+        position: fixed
+        top: 10px
+        z-index: 100
     .hello
         position: absolute
         left: 100px
@@ -35,6 +41,11 @@ body
         display: inline
         max-height: 10vh
     nav
+        .menuFixed
+            position: fixed
+            right: 0
+            top: -40px
+            z-index: 99
         .menu
             float: right
             padding: 20px 5px
@@ -55,6 +66,8 @@ body
                     display: none
                     &:hover
                         color: $grey
+                .linkFixed
+                    color: black
                 .nav-icon
                     width: 35px
                     height: 18px
@@ -82,6 +95,8 @@ body
                         width: 60%
                         right: 0 !important
                         transition: transform .2s ease-in-out
+                    .spanFixed
+                        background: black
                 .active
                     color: $grey
     .slogans
@@ -167,7 +182,7 @@ body
 
 
 .about-me
-    padding: 100px 100px
+    padding: 100px 100px 30px 100px
     .section-title
         font-size: 48px
         font-weight: bold
@@ -197,7 +212,7 @@ body
         line-height: 32px
 
 .skills
-    padding: 30px 100px
+    padding: 50px 100px
     .section-title
         font-size: 48px
         font-weight: bold
