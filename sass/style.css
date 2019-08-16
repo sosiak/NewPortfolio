@@ -70,6 +70,10 @@ body {
   transition: 5s ease-in-out;
 }
 
+.header nav .menu .menu-item .nav-icon:hover {
+  cursor: pointer;
+}
+
 .header nav .menu .menu-item .nav-icon span {
   background: white;
   width: 100%;
@@ -661,6 +665,38 @@ body {
   padding: 0;
 }
 
+.contact .row .contact-right .contact-social a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.contact .row .contact-right .contact-social a:hover {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
 footer {
   padding: 70px 100px;
   background-color: black;
@@ -674,6 +710,65 @@ footer img {
 footer p {
   color: rgba(255, 255, 255, 0.4);
   line-height: 40px;
+}
+
+footer .footer-social {
+  margin-top: 15px;
+  text-align: center;
+}
+
+footer .footer-social a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-right: 10px;
+  display: inline-block;
+  width: 45px;
+}
+
+footer .footer-social a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+footer .footer-contact {
+  text-align: right;
+}
+
+footer .footer-contact h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+}
+
+footer .footer-contact p {
+  line-height: 25px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 1200px) {

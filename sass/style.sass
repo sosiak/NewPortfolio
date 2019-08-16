@@ -54,6 +54,8 @@ body
                     margin-right: 15px
                     top: 18px
                     transition: 5s ease-in-out
+                    &:hover
+                        cursor: pointer
                     span
                         background: white
                         width: 100%
@@ -451,6 +453,32 @@ body
             font-size: 18px
             letter-spacing: -1px
             padding: 0
+            .contact-social
+                a
+                    color: black
+                    font-size: 20px
+                    text-decoration: none
+                    margin-left: 20px 
+                    display: inline-block
+                    &:hover
+                        -webkit-animation-duration: .3s
+                        animation-duration: .3s
+                        -webkit-animation-timing-function: linear
+                        animation-timing-function: linear
+                        -webkit-animation-name: rotation
+                        animation-name: rotation
+                        -webkit-animation-iteration-count: infinite
+                        animation-iteration-count: 1
+                        transform-origin: center
+                    @keyframes rotation 
+                        from 
+                            -webkit-transform: rotate3d(0, 0, 1, 0deg)
+                            transform: rotate3d(0, 0, 1, 0deg)
+                        
+
+                        to 
+                            -webkit-transform: rotate3d(0, 0, 1, 360deg)
+                            transform: rotate3d(0, 0, 1, 360deg)
 footer
     padding: 70px 100px
     background-color: black
@@ -460,7 +488,50 @@ footer
     p
         color: rgba(255, 255, 255, 0.4)
         line-height: 40px
+    .footer-social
+        margin-top: 15px
+        text-align: center
+        a
+            color: white
+            font-size: 16px
+            text-decoration: none
+            padding: 12px
+            border-radius: 50%
+            text-align: center
+            background-color: rgba(255, 255, 255, 0.15)
+            margin-right: 10px 
+            display: inline-block
+            width: 45px
+            &:hover
+                background-color: rgba(255, 255, 255, 0.2)
+                -webkit-animation-duration: .3s
+                animation-duration: .3s
+                -webkit-animation-timing-function: linear
+                animation-timing-function: linear
+                -webkit-animation-name: rotation
+                animation-name: rotation
+                -webkit-animation-iteration-count: infinite
+                animation-iteration-count: 1
+                transform-origin: center
+            @keyframes rotation 
+                from 
+                    -webkit-transform: rotate3d(0, 0, 1, 0deg)
+                    transform: rotate3d(0, 0, 1, 0deg)
+                
 
+                to 
+                    -webkit-transform: rotate3d(0, 0, 1, 360deg)
+                    transform: rotate3d(0, 0, 1, 360deg)
+    .footer-contact
+        text-align: right
+        h3
+            font-size: 25px
+            font-weight: bold
+            color: white
+            margin-bottom: 0
+        p
+            line-height: 25px
+            margin-bottom: 0
         
 
 
