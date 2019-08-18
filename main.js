@@ -55,7 +55,57 @@ const fixedNav = () => {
 document.addEventListener("scroll", fixedNav);
 
 
+//menu listItems colors
 
+const startListItem = document.querySelector("#startListItem");
+const aboutMeListItem = document.querySelector("#aboutMeListItem");
+const skillsListItem = document.querySelector("#skillsListItem");
+const portfolioListItem = document.querySelector("#portfolioListItem");
+const contactListItem = document.querySelector("#contactListItem");
+
+//sections scrollTop parameters
+const startScrollTop = document.querySelector(".header").clientHeight;
+const aboutMeScrollTop = startScrollTop + (document.querySelector(".about-me").clientHeight) - 60;
+const skillsScrollTop = aboutMeScrollTop + (document.querySelector(".skills").clientHeight) - 60;
+const portfolioScrollTop = skillsScrollTop + (document.querySelector(".portfolio").clientHeight) - 60;
+const contactScrollTop = portfolioScrollTop + (document.querySelector(".contact").clientHeight);
+
+
+document.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop <= startScrollTop) {
+        startListItem.className = "active";
+        aboutMeListItem.className = "";
+        skillsListItem.className = "";
+        portfolioListItem.className = "";
+        contactListItem.className = "";
+    } else if (document.documentElement.scrollTop > startScrollTop && document.documentElement.scrollTop <= aboutMeScrollTop) {
+        startListItem.className = "linkFixed";
+        aboutMeListItem.className = "active linkFixed";
+        skillsListItem.className = "linkFixed";
+        portfolioListItem.className = "linkFixed";
+        contactListItem.className = "linkFixed";
+    } else if (document.documentElement.scrollTop > aboutMeScrollTop && document.documentElement.scrollTop <= skillsScrollTop) {
+        startListItem.className = "linkFixed";
+        aboutMeListItem.className = "linkFixed";
+        skillsListItem.className = "active linkFixed";
+        portfolioListItem.className = "linkFixed";
+        contactListItem.className = "linkFixed";
+    } else if (document.documentElement.scrollTop > skillsScrollTop && document.documentElement.scrollTop < portfolioScrollTop) {
+        startListItem.className = "linkFixed";
+        aboutMeListItem.className = "linkFixed";
+        skillsListItem.className = "linkFixed";
+        portfolioListItem.className = "active linkFixed";
+        contactListItem.className = "linkFixed";
+    } else {
+        startListItem.className = "linkFixed";
+        aboutMeListItem.className = "linkFixed";
+        skillsListItem.className = "linkFixed";
+        portfolioListItem.className = "linkFixed";
+        contactListItem.className = "active linkFixed";
+    }
+})
+
+//
 
 //menu
 
@@ -186,11 +236,77 @@ const cursorVisibility = () => {
 setInterval(cursorVisibility, 700);
 //
 
-const allHrefs = document.querySelectorAll('[href^="#"]');
-const allHrefsArray = Array.prototype.slice.call(allHrefs);
-allHrefsArray.forEach((item) => {
-    item.addEventListener("click", (e) => {
-        let target = item.getAttribute('href');
-        // e.preventDefault();
+// overlay play and git animation
+
+const allOverlays = document.querySelectorAll(".overlay");
+const allOverlaysArray = [].slice.call(allOverlays);
+const allGitButtons = document.querySelectorAll(".code");
+const allGitButtonsArray = [].slice.call(allGitButtons);
+
+allOverlaysArray.forEach((item, index) => {
+    item.addEventListener("mouseover", () => {
+        allGitButtonsArray[index].style.opacity = "1";
+        allGitButtonsArray[index].style.left = "160px";
+
     })
 })
+allOverlaysArray.forEach((item, index) => {
+    item.addEventListener("mouseout", () => {
+        allGitButtonsArray[index].style.opacity = "0";
+        allGitButtonsArray[index].style.left = "40px";
+    })
+})
+
+//portfolio slides
+const allProjectsSite = document.querySelector(".all-projects");
+const allSitesSite = document.querySelector(".all-sites");
+const allApplicationSite = document.querySelector(".all-application");
+const allProjectsNav = document.querySelector("#allProjects")
+const allWebsiteNav = document.querySelector("#allWebsites");
+const allApplicationNav = document.querySelector("#allApplication");
+
+allProjectsNav.addEventListener("click", () => {
+    allProjectsSite.style.display = "block";
+    allSitesSite.style.display = "none";
+    allSitesSite.style.opacity = "0";
+    allApplicationSite.style.display = "none";
+    allApplicationSite.style.opacity = "0";
+    setTimeout(() => {
+        allProjectsSite.style.opacity = "1";
+    }, 100);
+    allProjectsNav.className = "nav-li-element active";
+    allWebsiteNav.className = "nav-li-element";
+    allApplicationNav.className = "nav-li-element";
+
+})
+
+allWebsiteNav.addEventListener("click", () => {
+    allProjectsSite.style.display = "none";
+    allSitesSite.style.display = "block";
+    allProjectsSite.style.opacity = "0";
+    allApplicationSite.style.display = "none";
+    allApplicationSite.style.opacity = "0";
+    setTimeout(() => {
+        allSitesSite.style.opacity = "1";
+    }, 100);
+    allProjectsNav.className = "nav-li-element";
+    allWebsiteNav.className = "nav-li-element active";
+    allApplicationNav.className = "nav-li-element";
+
+})
+
+allApplicationNav.addEventListener("click", () => {
+    allProjectsSite.style.display = "none";
+    allApplicationSite.style.display = "block";
+    allProjectsSite.style.opacity = "0";
+    allSitesSite.style.display = "none";
+    allSitesSite.style.opacity = "0";
+    setTimeout(() => {
+        allApplicationSite.style.opacity = "1";
+    }, 100);
+    allProjectsNav.className = "nav-li-element";
+    allWebsiteNav.className = "nav-li-element";
+    allApplicationNav.className = "nav-li-element active";
+
+})
+//

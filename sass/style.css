@@ -15,6 +15,8 @@ body {
   width: 100%;
   -webkit-box-shadow: 1.5px 1.33px 10px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 1.5px 1.33px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header {
@@ -38,6 +40,8 @@ body {
   position: fixed;
   top: 10px;
   z-index: 100;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .header .hello {
@@ -53,6 +57,8 @@ body {
   right: 0;
   top: -40px;
   z-index: 99;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .header nav .menu {
@@ -89,6 +95,8 @@ body {
 
 .header nav .menu .menu-item .linkFixed {
   color: black;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .header nav .menu .menu-item .nav-icon {
@@ -469,18 +477,19 @@ body {
 }
 
 .portfolio .nav-portfolio {
-  padding: 130px 100px;
+  padding: 130px 100px 0px 100px;
   position: absolute;
   right: 0;
+  z-index: 50;
 }
 
-.portfolio .nav-portfolio li {
+.portfolio .nav-portfolio .nav-li-element {
   letter-spacing: -1px;
   padding: 5px;
   display: inline-block;
 }
 
-.portfolio .nav-portfolio li:hover {
+.portfolio .nav-portfolio .nav-li-element:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -491,6 +500,10 @@ body {
 
 .portfolio .portfolio-all-sites .all-projects, .portfolio .portfolio-all-sites .all-sites {
   padding: 200px 30px 100px 30px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 1;
+  display: block;
 }
 
 .portfolio .portfolio-all-sites .all-projects .project-element, .portfolio .portfolio-all-sites .all-sites .project-element {
@@ -506,7 +519,26 @@ body {
           box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
 }
 
-.portfolio .portfolio-all-sites .all-projects .project-element .play-site, .portfolio .portfolio-all-sites .all-sites .project-element .play-site {
+.portfolio .portfolio-all-sites .all-projects .project-element .overlay, .portfolio .portfolio-all-sites .all-sites .project-element .overlay {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.portfolio .portfolio-all-sites .all-projects .project-element .overlay:hover, .portfolio .portfolio-all-sites .all-sites .project-element .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio .portfolio-all-sites .all-projects .project-element .play-site, .portfolio .portfolio-all-sites .all-sites .project-element .play-site, .portfolio .portfolio-all-sites .all-projects .project-element .code, .portfolio .portfolio-all-sites .all-sites .project-element .code {
   color: black;
   text-decoration: none;
   font-size: 25px;
@@ -516,14 +548,35 @@ body {
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  bottom: 70px;
-  left: 50px;
+  bottom: 40px;
+  left: 40px;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
+.portfolio .portfolio-all-sites .all-projects .project-element .play-site:hover, .portfolio .portfolio-all-sites .all-sites .project-element .play-site:hover, .portfolio .portfolio-all-sites .all-projects .project-element .code:hover, .portfolio .portfolio-all-sites .all-sites .project-element .code:hover {
+  background-color: black;
+  color: white;
+}
+
+.portfolio .portfolio-all-sites .all-projects .project-element .code, .portfolio .portfolio-all-sites .all-sites .project-element .code {
+  opacity: 0;
+  z-index: -1;
+}
+
 .portfolio .portfolio-all-sites .all-sites {
   display: none;
+  opacity: 0;
+}
+
+.portfolio .portfolio-all-sites .all-application {
+  display: none;
+  opacity: 0;
+  font-size: 60px;
+  padding: 200px 30px 100px 30px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  min-height: 1000px;
 }
 
 .portfolio .triangle-left-top {
@@ -811,6 +864,12 @@ footer .footer-contact p {
   .header .social-media {
     padding: 30px 50px;
   }
+  .about-me {
+    padding: 100px 30px 30px 30px;
+  }
+  .skills {
+    padding: 50px 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -825,6 +884,26 @@ footer .footer-contact p {
     position: absolute;
     top: 50px;
     right: 20px;
+  }
+  .header .slogans {
+    font-size: 40px;
+    padding: 250px 30px 50px 30px;
+  }
+  .header p {
+    font-size: 16px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header nav .menu .menu-item .nav-icon {
+    right: 0;
+  }
+  .header .hello {
+    display: none;
+  }
+  .header .logo {
+    left: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

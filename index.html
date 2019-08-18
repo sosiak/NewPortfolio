@@ -19,11 +19,11 @@
         <nav>
             <a href="#start"><img class="logo" src="Images/logo.png"></a>
             <ul class="menu">
-                <li class="menu-item menu-link "><a href="#start" class="active">Start</a></li>
-                <li class="menu-item menu-link"><a href="#about">O Mnie</a></li>
-                <li class="menu-item menu-link"><a href="#skill">Umiejętności</a></li>
-                <li class="menu-item menu-link"><a href="#portfolio">Portfolio</a></li>
-                <li class="menu-item menu-link"><a href="#contact">Kontakt</a></li>
+                <li class="menu-item menu-link "><a href="#start" id="startListItem">Start</a></li>
+                <li class="menu-item menu-link"><a href="#about" id="aboutMeListItem">O Mnie</a></li>
+                <li class="menu-item menu-link"><a href="#skill" id="skillsListItem">Umiejętności</a></li>
+                <li class="menu-item menu-link"><a href="#portfolio" id="portfolioListItem">Portfolio</a></li>
+                <li class="menu-item menu-link"><a href="#contact" id="contactListItem">Kontakt</a></li>
                 <li class="menu-item">
                     <div class="nav-icon">
                         <span id="first"></span>
@@ -65,29 +65,28 @@
         <h1 class="section-title">Umiejętności</h1>
         <div class="skills-container">
             <div class="row">
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left first-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left first-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>HTML5</h2>
                             <p>Wykorzystywanie składni i znaczników HTML5.</p>
                         </div>
                     </div>
-
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left second-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left second-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>CSS3</h2>
                             <p>Wykorzystywanie CSS3 w swoich projektach.</p>
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left third-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left third-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>Javascript</h2>
                             <p>Znajomość Javascript w wersji ES5 i ES6. Umiejętność programowania funkcjonalnego w
                                 Javascript.
@@ -95,28 +94,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left fourth-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left fourth-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>Responsive Web Design (RWD)</h2>
                             <p>Tworzenie responsywnych stron przy użyciu grid i media queries.</p>
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left fifth-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left fifth-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>Adobe Photoshop</h2>
                             <p>Cięcie layoutu PSD, obsługa warst, wycinanie informacji i danych z warstw</p>
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left sixth-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left sixth-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>Git</h2>
                             <p>Praktyczne korzystanie z repozytoriów poprzez m.in. dodawanie, commitowanie i pushowanie
                                 zmian.
@@ -124,10 +123,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left seventh-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left seventh-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>Bootstrap</h2>
                             <p>Praktyczne wykorzystanie i modyfikacje komponentów Bootstrapa dla potrzeb danego
                                 projektu.
@@ -135,10 +134,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills-element col-lg-4">
+                <div class="skills-element col-md-4 col-sm-6">
                     <div class="row">
-                        <div class="skills-left eigth-skill col-lg-3"></div>
-                        <div class="skills-right col-lg-9">
+                        <div class="skills-left eigth-skill col-3"></div>
+                        <div class="skills-right col-9">
                             <h2>jQuery</h2>
                             <p>Operacje na elementach DOM, proste animacje.</p>
                         </div>
@@ -151,66 +150,105 @@
     <section class="portfolio" id="portfolio">
         <h1 class="section-title">Portfolio</h1>
         <ul class="nav-portfolio">
-            <li class="active">Wszystkie projekty</li>
-            <li>Strony internetowe</li>
-            <li>Aplikacje</li>
+            <li class="nav-li-element active" id="allProjects">Wszystkie projekty</li>
+            <li class="nav-li-element" id="allWebsites">Strony internetowe</li>
+            <li class="nav-li-element" id="allApplication">Aplikacje</li>
         </ul>
         <div class="portfolio-all-sites">
             <div class="all-projects col-lg-12">
                 <div class="row">
                     <div class="project-element my-portfolio col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/portfolio.png" alt="portfolio">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element fitness col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/fitness.png" alt="fitness">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element mogo col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"> <i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/mogo.png" alt="mogo">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element design-lab col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/design-lab.png" alt="design-lab">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element active-box col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/activebox.png" alt="active-box">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element picture-perfect col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/picture-perfect.png" alt="picture-perfect">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                 </div>
             </div>
             <div class="all-sites col-lg-12">
                 <div class="row">
                     <div class="project-element my-portfolio col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/portfolio.png" alt="portfolio">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element fitness col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/fitness.png" alt="fitness">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element mogo col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"> <i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/mogo.png" alt="mogo">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element design-lab col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/design-lab.png" alt="design-lab">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element active-box col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/activebox.png" alt="active-box">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                     <div class="project-element picture-perfect col-lg-4">
+                        <div class="overlay">
+                            <a href="#" class="play-site"><i class="fas fa-play"></i></a>
+                            <a href="#" class="code"><i class="fab fa-github"></i></a>
+                        </div>
                         <img src="Images/picture-perfect.png" alt="picture-perfect">
-                        <a href="#" class="play-site"><i class="fas fa-play"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="all-application col-lg-12">
+                <h1>Wkrótce . . . </h1>
             </div>
             <div class="triangle-left-top"></div>
             <div class="triangle-right-top"></div>
