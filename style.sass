@@ -8,7 +8,46 @@ html
 body
     font-family: $main-font
     margin: 0 auto
-    
+.overlay-all-window 
+    position: fixed
+    height: 100vh
+    width: 100vw
+    z-index: 150
+    img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 50px
+        width: auto
+        margin: auto
+        transition: .5s
+    p
+        color: $grey
+        position: absolute
+        font-size: 16px
+        left: 50%
+        top: 60%
+        transform: translate(-50%, -50%)
+        transition: .3s
+    .half
+        display: inline-block
+    .left
+        background-color: black
+        width: 50%
+        height: 100%
+        padding: 0
+        transition: .7s
+        float: left
+    .right
+        background-color: black
+        width: 50%
+        height: 100%
+        padding: 0
+        transition: .7s
+        float: right
+
 .backgroundToFixedNav
     position: fixed
     top: 0
@@ -39,7 +78,7 @@ body
     .hello
         position: absolute
         left: 100px
-        top: 120px
+        top: 15vh
         display: inline
         max-height: 10vh
     nav
@@ -105,7 +144,7 @@ body
                     color: $grey
     .slogans
         color: white
-        padding: 250px 100px 50px 100px
+        padding: 30vh 100px 10vh 100px
         font-size: 65px
         font-weight: 900
         letter-spacing: -3px
@@ -115,7 +154,7 @@ body
         .active
             opacity: 1
     .social-media
-        padding: 30px 100px
+        padding: 5vh 100px
         a
             margin-right: 40px
             &:hover
@@ -280,7 +319,7 @@ body
                     margin-block-start: 0
                     margin-block-end: 0
 .portfolio
-    padding: 100px 30px
+    padding: 10vh 30px
     background-color: #f3f3f3
     position: relative
     .section-title
@@ -344,9 +383,9 @@ body
                     background-color: rgba(0, 0, 0, 0)
                     border-radius: 10px
                     position: absolute
-                    top: 50%;
-                    left: 50%;
-                    margin-right: -50%;
+                    top: 50%
+                    left: 50%
+                    margin-right: -50%
                     transform: translate(-50%, -50%)
                     transition: .5s
                     &:hover
@@ -455,10 +494,10 @@ body
                 .row
                     padding: 0
                     //reset bootstrap paddings
-                    .col-lg-6
+                    .col-sm-6
                         padding-left: 0
                         padding-right: 0
-                    .col-lg-12
+                    .col-sm-12
                         padding-left: 0
                         padding-right: 0
                     //
@@ -599,7 +638,7 @@ footer
         .hello 
             left: 50px
         .slogans
-            padding: 250px 50px 50px 50px
+            padding: 30vh 50px 50px 50px
         p
             padding: 30px 50px
         .social-media
@@ -608,14 +647,42 @@ footer
         padding: 100px 30px 30px 30px
     .skills
         padding: 50px 30px
+    .portfolio
+        .section-title
+            padding-right: 0px
+            &:before
+                right: 0
+            &:after
+                right: 0
+        .nav-portfolio
+            padding: 130px 30px 0px 100px
+    .contact
+        padding: 30px 30px   
+    footer
+        padding: 50px 30px 
+        p
+            line-height: 30px
+            font-size: 14px
+        .footer-contact
+            h3
+                font-size: 20px
+            p 
+                font-size: 14px
+                line-height: 20px
 @media(max-width: 767px)
     .header
+        .logo
+            z-index: 100
         nav
             .menu
                 position: relative
-                right: 50px
+                width: 100%
+                padding: 0
                 .menu-link
                     display: block
+                    text-align: center
+                    background-color: rgba(0, 0, 0, 0.5)
+                    transform: matrix(1, 0, 0, 1, 0, 0)
                 .menu-item
                     .nav-icon
                         position: absolute
@@ -623,10 +690,35 @@ footer
                         right: 20px
         .slogans
             font-size: 40px
-            padding: 250px 30px 50px 30px
+            padding: 250px 10px 50px 10px
         p
             font-size: 16px
             padding: 30px
+    .portfolio
+        .portfolio-all-sites
+            .all-projects
+                .project-element
+                    .code
+                        opacity: 1
+                        left: 160px
+    .contact
+        .row
+            .contact-left
+                form
+                    input
+                        margin-bottom: 20px
+    footer
+        p
+            text-align: center
+        img
+            position: absolute
+            left: 50%
+            top: -10px
+            margin-right: 50%
+            transform: translate(-50%, -50%)
+        .footer-contact
+            p
+                text-align: right
 @media(max-width: 576px)
     .header
         nav
@@ -638,3 +730,23 @@ footer
             display: none
         .logo
             left: 10px
+    .about-me
+        padding: 50px 10px
+        p
+            font-size: 16px
+    .portfolio
+        .portfolio-all-sites
+            .all-projects
+                .project-element
+                    .code
+                        opacity: 1
+                        left: 100px
+        .nav-portfolio
+            padding: 130px 10px 0px 10px
+    footer
+        .footer-contact
+            h3
+                margin-top: 20px
+                text-align: center
+            p
+                text-align: center

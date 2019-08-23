@@ -7,6 +7,62 @@ body {
   margin: 0 auto;
 }
 
+.overlay-all-window {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 150;
+}
+
+.overlay-all-window img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: auto;
+  margin: auto;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.overlay-all-window p {
+  color: #cbcdc4;
+  position: absolute;
+  font-size: 16px;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.overlay-all-window .half {
+  display: inline-block;
+}
+
+.overlay-all-window .left {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  -webkit-transition: .7s;
+  transition: .7s;
+  float: left;
+}
+
+.overlay-all-window .right {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  -webkit-transition: .7s;
+  transition: .7s;
+  float: right;
+}
+
 .backgroundToFixedNav {
   position: fixed;
   top: 0;
@@ -47,7 +103,7 @@ body {
 .header .hello {
   position: absolute;
   left: 100px;
-  top: 120px;
+  top: 15vh;
   display: inline;
   max-height: 10vh;
 }
@@ -156,7 +212,7 @@ body {
 
 .header .slogans {
   color: white;
-  padding: 250px 100px 50px 100px;
+  padding: 30vh 100px 10vh 100px;
   font-size: 65px;
   font-weight: 900;
   letter-spacing: -3px;
@@ -173,7 +229,7 @@ body {
 }
 
 .header .social-media {
-  padding: 30px 100px;
+  padding: 5vh 100px;
 }
 
 .header .social-media a {
@@ -441,7 +497,7 @@ body {
 }
 
 .portfolio {
-  padding: 100px 30px;
+  padding: 10vh 30px;
   background-color: #f3f3f3;
   position: relative;
 }
@@ -670,12 +726,12 @@ body {
   padding: 0;
 }
 
-.contact .row .contact-left form .row .col-lg-6 {
+.contact .row .contact-left form .row .col-sm-6 {
   padding-left: 0;
   padding-right: 0;
 }
 
-.contact .row .contact-left form .row .col-lg-12 {
+.contact .row .contact-left form .row .col-sm-12 {
   padding-left: 0;
   padding-right: 0;
 }
@@ -856,7 +912,7 @@ footer .footer-contact p {
     left: 50px;
   }
   .header .slogans {
-    padding: 250px 50px 50px 50px;
+    padding: 30vh 50px 50px 50px;
   }
   .header p {
     padding: 30px 50px;
@@ -870,15 +926,52 @@ footer .footer-contact p {
   .skills {
     padding: 50px 30px;
   }
+  .portfolio .section-title {
+    padding-right: 0px;
+  }
+  .portfolio .section-title:before {
+    right: 0;
+  }
+  .portfolio .section-title:after {
+    right: 0;
+  }
+  .portfolio .nav-portfolio {
+    padding: 130px 30px 0px 100px;
+  }
+  .contact {
+    padding: 30px 30px;
+  }
+  footer {
+    padding: 50px 30px;
+  }
+  footer p {
+    line-height: 30px;
+    font-size: 14px;
+  }
+  footer .footer-contact h3 {
+    font-size: 20px;
+  }
+  footer .footer-contact p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 767px) {
+  .header .logo {
+    z-index: 100;
+  }
   .header nav .menu {
     position: relative;
-    right: 50px;
+    width: 100%;
+    padding: 0;
   }
   .header nav .menu .menu-link {
     display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0);
   }
   .header nav .menu .menu-item .nav-icon {
     position: absolute;
@@ -887,11 +980,32 @@ footer .footer-contact p {
   }
   .header .slogans {
     font-size: 40px;
-    padding: 250px 30px 50px 30px;
+    padding: 250px 10px 50px 10px;
   }
   .header p {
     font-size: 16px;
     padding: 30px;
+  }
+  .portfolio .portfolio-all-sites .all-projects .project-element .code, .portfolio .portfolio-all-sites .all-sites .project-element .code {
+    opacity: 1;
+    left: 160px;
+  }
+  .contact .row .contact-left form input {
+    margin-bottom: 20px;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer img {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-right: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  footer .footer-contact p {
+    text-align: right;
   }
 }
 
@@ -904,6 +1018,26 @@ footer .footer-contact p {
   }
   .header .logo {
     left: 10px;
+  }
+  .about-me {
+    padding: 50px 10px;
+  }
+  .about-me p {
+    font-size: 16px;
+  }
+  .portfolio .portfolio-all-sites .all-projects .project-element .code, .portfolio .portfolio-all-sites .all-sites .project-element .code {
+    opacity: 1;
+    left: 100px;
+  }
+  .portfolio .nav-portfolio {
+    padding: 130px 10px 0px 10px;
+  }
+  footer .footer-contact h3 {
+    margin-top: 20px;
+    text-align: center;
+  }
+  footer .footer-contact p {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
