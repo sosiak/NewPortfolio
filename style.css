@@ -75,6 +75,15 @@ body {
   transition: 0.5s;
 }
 
+.backgroundNavActive {
+  height: 55px;
+  display: block;
+}
+
+.removeFixedNav {
+  height: 0;
+}
+
 header {
   min-height: 100vh;
   background-image: url("../Images/mainsecond.jpg");
@@ -443,11 +452,15 @@ header .triangle-right {
   padding: 20px 30px;
 }
 
+.skills .skills-container .skills-element {
+  margin-top: 10px;
+}
+
 .skills .skills-container .skills-element .skills-left {
-  min-height: 200px;
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
+  height: 80px;
 }
 
 .skills .skills-container .skills-element .first-skill {
@@ -480,10 +493,6 @@ header .triangle-right {
 
 .skills .skills-container .skills-element .eigth-skill {
   background-image: url("../Images/jquery.png");
-}
-
-.skills .skills-container .skills-element .skills-right {
-  min-height: 150px;
 }
 
 .skills .skills-container .skills-element .skills-right h2 {
@@ -584,6 +593,8 @@ header .triangle-right {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
   border-radius: 10px;
   -webkit-box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);

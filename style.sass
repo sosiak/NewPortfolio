@@ -56,7 +56,11 @@ body
     width: 100%
     box-shadow: 1.5px 1.33px 10px 0px rgba(0, 0, 0, 0.75)
     transition: 0.5s
-
+.backgroundNavActive
+    height: 55px
+    display: block
+.removeFixedNav
+    height: 0
 header 
     min-height: 100vh
     background-image: url('../Images/mainsecond.jpg')
@@ -289,11 +293,12 @@ header
     .skills-container
         padding: 20px 30px
         .skills-element
+            margin-top: 10px
             .skills-left
-                min-height: 200px
                 background-position: top
                 background-size: contain
                 background-repeat: no-repeat
+                height: 80px
             .first-skill
                 background-image: url('../Images/html5.png')
             .second-skill
@@ -311,7 +316,6 @@ header
             .eigth-skill
                 background-image: url('../Images/jquery.png')
             .skills-right
-                min-height: 150px
                 h2
                     font-weight: bold
                     font-size: 22px
@@ -384,6 +388,7 @@ header
                     width: 100%
                     height: 100%
                     object-fit: cover
+                    object-position: left center
                     border-radius: 10px
                     box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75)
                 .overlay

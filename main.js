@@ -59,13 +59,13 @@ window.addEventListener("load", () => {
                 })
             }
             flagFixed = true;
-            backgroundDiv.style.height = `55px`;
-            backgroundDiv.style.display = "block";
+            backgroundDiv.className = "backgroundToFixedNav backgroundNavActive";
+
         } else {
             logoImage.setAttribute("src", "Images/logo.png");
             if (flagFixed == true) {
                 logoImage.classList.toggle("logoFixed");
-                backgroundDiv.style.height = "0px";
+                backgroundDiv.className = "backgroundToFixedNav removeFixedNav"
                 menu.classList.toggle("menuFixed");
                 menuSpan.forEach((e) => {
                     e.classList.toggle("spanFixed");
