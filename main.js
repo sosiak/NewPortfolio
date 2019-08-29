@@ -90,7 +90,7 @@ window.addEventListener("load", () => {
     const contactListItem = document.querySelector("#contactListItem");
 
     //sections scrollTop parameters
-    const startScrollTop = document.querySelector(".header").clientHeight;
+    const startScrollTop = document.querySelector("header").clientHeight;
     const aboutMeScrollTop = startScrollTop + (document.querySelector(".about-me").clientHeight) - 60;
     const skillsScrollTop = aboutMeScrollTop + (document.querySelector(".skills").clientHeight) - 60;
     const portfolioScrollTop = skillsScrollTop + (document.querySelector(".portfolio").clientHeight) - 60;
@@ -213,7 +213,9 @@ window.addEventListener("load", () => {
         let flag = true;
 
         const typingEffect = () => {
+
             let word = words[i].split("");
+            spanDynamicText.textContent = " ";
             const loopTyping = () => {
                 if (word.length > 0) {
                     spanDynamicText.textContent += word.shift();
@@ -235,13 +237,15 @@ window.addEventListener("load", () => {
                 } else {
                     if (words.length > (i + 1)) {
                         i++;
+                        spanDynamicText.textContent = " ";
                     } else {
                         i = 0;
+                        spanDynamicText.textContent = " ";
                     };
                     typingEffect();
                     return false;
                 };
-                timer = setTimeout(loopDeleting, 100);
+                timer = setTimeout(loopDeleting, 50);
             };
             setTimeout(loopDeleting, 2000);
         };
@@ -262,10 +266,10 @@ window.addEventListener("load", () => {
     let words = [];
 
     if (window.innerWidth > 576) {
-        words = ["tu Sławomir ", "tu SIOFO ", "oto mój mały świat . . . "];
+        words = ["tu Sławomir", "tu SIOFO", "oto mój mały świat . . ."];
         typingText();
     } else {
-        words = ["tu Sławomir ", "tu SIOFO "];
+        words = ["tu Sławomir", "tu SIOFO"];
         typingText();
     }
 

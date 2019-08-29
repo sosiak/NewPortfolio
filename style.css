@@ -75,7 +75,7 @@ body {
   transition: 0.5s;
 }
 
-.header {
+header {
   min-height: 100vh;
   background-image: url("../Images/mainsecond.jpg");
   background-position: center;
@@ -83,7 +83,7 @@ body {
   position: relative;
 }
 
-.header .logo {
+header .logo {
   position: absolute;
   display: inline;
   top: 50px;
@@ -92,7 +92,7 @@ body {
   width: auto;
 }
 
-.header .logoFixed {
+header .logoFixed {
   position: fixed;
   top: 10px;
   z-index: 100;
@@ -100,7 +100,7 @@ body {
   transition: .5s;
 }
 
-.header .hello {
+header .hello {
   position: absolute;
   left: 100px;
   top: 15vh;
@@ -108,7 +108,7 @@ body {
   max-height: 10vh;
 }
 
-.header nav .menuFixed {
+header nav .menuFixed {
   position: fixed;
   right: 0;
   top: -40px;
@@ -117,12 +117,12 @@ body {
   transition: .5s;
 }
 
-.header nav .menu {
+header nav .menu {
   float: right;
   padding: 20px 5px;
 }
 
-.header nav .menu .menu-link {
+header nav .menu .menu-link {
   -webkit-transition: 1s 0.0s;
   transition: 1s 0.0s;
   opacity: 0;
@@ -130,14 +130,14 @@ body {
           transform: matrix(1, 0, 0, 1, 50, 0);
 }
 
-.header nav .menu .menu-item {
+header nav .menu .menu-item {
   display: inline-block;
   font-size: 18px;
   line-height: 18px;
   padding: 15px 10px;
 }
 
-.header nav .menu .menu-item a {
+header nav .menu .menu-item a {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -145,17 +145,17 @@ body {
   display: none;
 }
 
-.header nav .menu .menu-item a:hover {
+header nav .menu .menu-item a:hover {
   color: #cbcdc4;
 }
 
-.header nav .menu .menu-item .linkFixed {
+header nav .menu .menu-item .linkFixed {
   color: black;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.header nav .menu .menu-item .nav-icon {
+header nav .menu .menu-item .nav-icon {
   width: 35px;
   height: 18px;
   position: relative;
@@ -165,11 +165,11 @@ body {
   transition: 5s ease-in-out;
 }
 
-.header nav .menu .menu-item .nav-icon:hover {
+header nav .menu .menu-item .nav-icon:hover {
   cursor: pointer;
 }
 
-.header nav .menu .menu-item .nav-icon span {
+header nav .menu .menu-item .nav-icon span {
   background: white;
   width: 100%;
   height: 3px;
@@ -178,7 +178,7 @@ body {
   opacity: 1;
 }
 
-.header nav .menu .menu-item .nav-icon #first {
+header nav .menu .menu-item .nav-icon #first {
   top: 0;
   -webkit-transition: -webkit-transform .2s ease-in-out;
   transition: -webkit-transform .2s ease-in-out;
@@ -186,13 +186,13 @@ body {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.header nav .menu .menu-item .nav-icon #second {
+header nav .menu .menu-item .nav-icon #second {
   top: 7px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
-.header nav .menu .menu-item .nav-icon #third {
+header nav .menu .menu-item .nav-icon #third {
   top: 14px;
   width: 60%;
   right: 0 !important;
@@ -202,51 +202,62 @@ body {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.header nav .menu .menu-item .nav-icon .spanFixed {
+header nav .menu .menu-item .nav-icon .spanFixed {
   background: black;
 }
 
-.header nav .menu .menu-item .active {
+header nav .menu .menu-item .active {
   color: #cbcdc4;
 }
 
-.header .slogans {
+header .slogans {
   color: white;
-  padding: 30vh 100px 10vh 100px;
+  padding: 30vh 100px 20vh 100px;
   font-size: 65px;
+  height: 140px;
   font-weight: 900;
   letter-spacing: -3px;
 }
 
-.header .slogans .cursor {
+header .slogans span {
+  display: inline-block;
+  position: relative;
+  top: 0;
+}
+
+header .slogans .text {
+  line-height: 65px;
+}
+
+header .slogans .cursor {
   opacity: 0;
   -webkit-transition: .2s;
   transition: .2s;
 }
 
-.header .slogans .active {
+header .slogans .active {
   opacity: 1;
 }
 
-.header .social-media {
+header .social-media {
   padding: 5vh 100px;
 }
 
-.header .social-media a {
+header .social-media a {
   margin-right: 40px;
 }
 
-.header .social-media a:hover {
+header .social-media a:hover {
   text-decoration: none;
 }
 
-.header .social-media a .fab {
+header .social-media a .fab {
   font-size: 22px;
   color: white;
   cursor: pointer;
 }
 
-.header .social-media a .fab:hover {
+header .social-media a .fab:hover {
   -webkit-animation-duration: .3s;
   animation-duration: .3s;
   -webkit-animation-timing-function: linear;
@@ -281,7 +292,7 @@ body {
   }
 }
 
-.header p {
+header p {
   color: #cbcdc4;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 30px 100px;
@@ -290,21 +301,22 @@ body {
   letter-spacing: 1px;
 }
 
-.header .arrow-down {
+header .arrow-down {
   padding: 30px 150px;
 }
 
-.header .arrow-down a {
+header .arrow-down a {
   color: white;
   text-decoration: none;
   font-size: 36px;
 }
 
-.header .arrow-down a .bounce-arrow {
+header .arrow-down a .bounce-arrow {
   position: relative;
   top: 0;
   -webkit-animation: bounce 2s infinite;
           animation: bounce 2s infinite;
+  padding: 15px;
 }
 
 @-webkit-keyframes bounce {
@@ -337,7 +349,7 @@ body {
   }
 }
 
-.header .triangle-left {
+header .triangle-left {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -346,7 +358,7 @@ body {
   border-right: 22vw solid transparent;
 }
 
-.header .triangle-right {
+header .triangle-right {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -570,6 +582,8 @@ body {
 .portfolio .portfolio-all-sites .all-projects .project-element img, .portfolio .portfolio-all-sites .all-sites .project-element img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   -webkit-box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 2.5px 4.33px 111px 0px rgba(0, 0, 0, 0.75);
@@ -899,32 +913,32 @@ footer .footer-contact p {
 }
 
 @media (max-width: 1200px) {
-  .header .slogans {
+  header .slogans {
     font-size: 50px;
   }
 }
 
 @media (max-width: 992px) {
-  .header nav .menu .menu-item {
+  header nav .menu .menu-item {
     padding: 15px 5px;
   }
-  .header .hello {
+  header .hello {
     left: 50px;
   }
-  .header .slogans {
-    padding: 30vh 50px 50px 50px;
+  header .slogans {
+    padding: 30vh 50px 20vh 50px;
   }
-  .header p {
+  header p {
     padding: 30px 50px;
   }
-  .header .social-media {
+  header .social-media {
     padding: 30px 50px;
   }
   .about-me {
-    padding: 100px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
   }
   .skills {
-    padding: 50px 30px;
+    padding: 30px 30px;
   }
   .portfolio .section-title {
     padding-right: 0px;
@@ -958,31 +972,31 @@ footer .footer-contact p {
 }
 
 @media (max-width: 767px) {
-  .header .logo {
+  header .logo {
     z-index: 100;
   }
-  .header nav .menu {
+  header nav .menu {
     position: relative;
     width: 100%;
     padding: 0;
   }
-  .header nav .menu .menu-link {
+  header nav .menu .menu-link {
     display: block;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
             transform: matrix(1, 0, 0, 1, 0, 0);
   }
-  .header nav .menu .menu-item .nav-icon {
+  header nav .menu .menu-item .nav-icon {
     position: absolute;
     top: 50px;
     right: 20px;
   }
-  .header .slogans {
+  header .slogans {
     font-size: 40px;
-    padding: 250px 10px 50px 10px;
+    padding: 250px 10px 120px 10px;
   }
-  .header p {
+  header p {
     font-size: 16px;
     padding: 30px;
   }
@@ -1010,13 +1024,13 @@ footer .footer-contact p {
 }
 
 @media (max-width: 576px) {
-  .header nav .menu .menu-item .nav-icon {
+  header nav .menu .menu-item .nav-icon {
     right: 0;
   }
-  .header .hello {
+  header .hello {
     display: none;
   }
-  .header .logo {
+  header .logo {
     left: 10px;
   }
   .about-me {
@@ -1024,6 +1038,9 @@ footer .footer-contact p {
   }
   .about-me p {
     font-size: 16px;
+  }
+  .skills {
+    padding: 30px 10px;
   }
   .portfolio .portfolio-all-sites .all-projects .project-element .code, .portfolio .portfolio-all-sites .all-sites .project-element .code {
     opacity: 1;
