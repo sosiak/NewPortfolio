@@ -1,4 +1,3 @@
-window.addEventListener("load", () => {
     //remove overlay and start animation
     const overlayStart = document.querySelector(".overlay-all-window");
     const imgStart = document.querySelector(".overlay-all-window img");
@@ -353,4 +352,3 @@ window.addEventListener("load", () => {
 
     })
     //
-})
